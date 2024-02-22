@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 // DTO(Data Transfer Object
 public class BoardDTO {
 
+    private Long id;
     private String boardWriter;
     private String boardPass;
     private String boardTitle;
@@ -24,6 +25,7 @@ public class BoardDTO {
     public static BoardDTO toBoardDTO(BoardEntity boardEntity){
 
         BoardDTO boardDTO = new BoardDTO();
+        boardDTO.setId(boardEntity.getId());
         boardDTO.setBoardWriter(boardEntity.getBoardWriter());
         boardDTO.setBoardPass(boardEntity.getBoardPass());
         boardDTO.setBoardTitle(boardEntity.getBoardTitle());
